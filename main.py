@@ -1,7 +1,7 @@
 import sys
 import pickle
-import scipy.misc
-# import imageio
+# import scipy.misc
+import imageio
 import numpy as np
 from crypto import Hill
 from image import read_image, show_image, show_images
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     
     # Save the image
     
-    scipy.misc.imsave(encoded_img_name, encoded_image)
+    imageio.imwrit(encoded_img_name, encoded_image)
     
     # Save the image as a pickle model
     pickle.dump(encoded_image_vector, open( encoded_img_name + '.pk', "wb" ))
@@ -72,4 +72,4 @@ if __name__ == '__main__':
     decoded_img_name = '{0}-decoded.{1}'.format(img_name, img_extension)
 
     # Save the image
-    scipy.misc.imsave(decoded_img_name, decoded_image)
+    imageio.imwrit(decoded_img_name, decoded_image)
