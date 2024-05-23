@@ -1,11 +1,14 @@
-from scipy import misc
+# from scipy import misc
 import numpy as np
 import matplotlib.pyplot as plt
+import imageio
+
 
 
 def read_image(image_path):
     """ Read an image and return a one hot vector of the image"""
-    img = misc.imread(image_path)
+    # img = misc.imread(image_path)
+    img = imageio.imread(image_path)
     reshape_value = 1
 
     for i in img.shape:
