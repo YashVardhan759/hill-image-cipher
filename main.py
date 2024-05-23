@@ -71,5 +71,6 @@ if __name__ == '__main__':
     
     decoded_img_name = '{0}-decoded.{1}'.format(img_name, img_extension)
 
+    decoded_image = decoded_image.astype('uint8')
     # Save the image
     imageio.imwrite(decoded_img_name, decoded_image)
