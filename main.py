@@ -50,7 +50,7 @@ if __name__ == '__main__':
     
     # Save the image
     
-    imageio.imwrit(encoded_img_name, encoded_image)
+    imageio.imwrite(encoded_img_name, encoded_image)
     
     # Save the image as a pickle model
     pickle.dump(encoded_image_vector, open( encoded_img_name + '.pk', "wb" ))
@@ -72,4 +72,4 @@ if __name__ == '__main__':
     decoded_img_name = '{0}-decoded.{1}'.format(img_name, img_extension)
 
     # Save the image
-    imageio.imwrit(decoded_img_name, decoded_image)
+    imageio.imwrite(decoded_img_name, decoded_image)
